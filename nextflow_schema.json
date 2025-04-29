@@ -27,6 +27,12 @@
                     "fa_icon": "fas fa-database",
                     "description": "Path (full or relative) for where kraken2 database files are, which includes hash.k2d, taxo.k2d, opts.k2d and ktaxonomy.tsv files. You can pass a decompressed folder or in its compressed '.tar.gz' form. The database can be downloaded from https://benlangmead.github.io/aws-indexes/k2 . You must use a database created after 3/14/2023.",
                     "default": "null"
+                },
+                "outdir": {
+                    "type": "string",
+                    "description": "Path to the output directory where the results will be saved. Can be a full or relative path.",
+                    "default": "${launchDir}/phx_output",
+                    "fa_icon": "fas fa-folder-open"
                 }
             }
         },
@@ -76,12 +82,6 @@
             "fa_icon": "fas fa-terminal",
             "description": "Define where the pipeline should find input data and save output data.",
             "properties": {
-                "outdir": {
-                    "type": "string",
-                    "description": "Path to the output directory where the results will be saved. Can be a full or relative path.",
-                    "default": "${launchDir}/phx_output",
-                    "fa_icon": "fas fa-folder-open"
-                },
                 "coverage": {
                     "type": "integer",
                     "description": "If you want to increase the coverage cut off >30x use --coverage (ex. --coverage 40)",
