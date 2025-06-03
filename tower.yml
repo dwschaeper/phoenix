@@ -4,16 +4,7 @@ reports:
   "Phoenix_Summary.tsv":
     display: "PHoeNIx summary"
   "*GRiPHin_Summary.tsv":
-    display: "PHoeNIx additional summary with AMR gene coverage,%ID information as tsv."
+    display: "Complete PHoeNIx summary with AMR gene coverage,%ID information as tsv."
   "*GRiPHin_Summary.xlsx":
-    display: "PHoeNIx additional summary with AMR gene coverage,%ID information as an excel sheet."
-  "*.synopsis":
-    display: "Summary of stats for the an individual sample"
-    mimeType: text/plain
-  "*.tax":
-    display: "Best taxonomy assignment from either Kraken2 or FastANI"
-    mimeType: text/plain
-  "**/mlst/*.tsv":
-    display: "MLST"
-  "**/AMRFinder/*_all_genes.tsv":
-    display: "AMRFinder Output"
+    display: "Complete PHoeNIx summary with AMR gene coverage,%ID information as an excel sheet."
+    
