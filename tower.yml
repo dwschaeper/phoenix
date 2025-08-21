@@ -9,3 +9,5 @@ reports:
     display: "Complete PHoeNIx summary with AMR gene coverage,%ID information as an excel sheet."
   "**/kraken2_trimd/*summary.txt":
     display: "Sample taxonomic classification details."
+  "**/ANI/*ani.txt":
+    display: "FastANI classifications"
