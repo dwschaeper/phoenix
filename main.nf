@@ -33,28 +33,6 @@ if (params.output) { exit 1, "ERROR: Unknown parameter '--output'. Did you mean 
 // Access workflow metadata
 if (params.pipeline != null) { exit 1, "--pipeline is not a parameter for phoenix, please use --mode." }
 
-if (params.mode_upper == 'UPDATE_PHOENIX') {
-    info_dir = "update_pipeline_info"
-} else if (params.mode_upper == 'CENTAR') {
-    info_dir = "centar_pipeline_info"
-} else {
-    tracedir = "${params.outdir}/pipeline_info"
-}
-if (params.mode_upper == 'UPDATE_PHOENIX' || params.mode_upper == 'CENTAR') {
-    if (params.input != null) {
-        if (params.outdir != "${launchDir}/phx_output") {
-            tracedir = "${params.outdir}/${info_dir}"  // Default path
-        } else {
-            tracedir = "${launchDir}/${info_dir}" // this isn't going to work as project_id_dir isn't known here (so --input won't have this in the right place)
-        }
-    } else if (params.indir != null) {
-        if (params.outdir != "${launchDir}/phx_output") {
-            tracedir = "${params.outdir}/${info_dir}"  // Default path
-        } else {
-            tracedir = "${params.indir}/${info_dir}"  // Save to params.indir if defined
-        }
-    }
-}
 
 /*
 ========================================================================================
